@@ -1,1 +1,1 @@
-node "facebook.js"  "credentials.json" 
+node "facebook.js" "cred.json" 
