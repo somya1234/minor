@@ -1,0 +1,23 @@
+{
+  "name": "minor",
+  "version": "1.0.0",
+  "description": "",
+  "main": "facebook.js",
+  "dependencies": {
+    "cheerio": "^1.0.0-rc.3",
+    "harvest": "^2.2.5",
+    "pdf-poppler": "^0.2.1",
+    "pdf-image": "^2.0.0",
+    "pdf2pic": "^2.1.2",
+    "puppeteer": "^5.4.1",
+    "request": "^2.88.2",
+    "request-promise-native": "^1.0.9"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
