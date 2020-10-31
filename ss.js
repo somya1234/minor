@@ -1,5 +1,7 @@
 let fromPath = require("pdf2pic").fromPath;
-
+let path = require("path");
+let pr = path.join("downloads", "abc.txt");
+console.log(pr)
 
 const options = {
   density: 100,
