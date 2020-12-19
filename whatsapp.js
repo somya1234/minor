@@ -1,6 +1,6 @@
 let puppeteer = require("puppeteer");
 
-let names = ["sonam"]
+let names = ["mygroup", "sonam"]
 let notices = require('./notices.json');
 console.log("hi")
 
