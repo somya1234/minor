@@ -3,3 +3,4 @@ npm install cheerio
 npm install request-promise-native
 npm install -S pdf2pic
 
+npm install telebot
