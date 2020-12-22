@@ -19,9 +19,10 @@ async function sendMessage() {
     await page.goto("https://web.whatsapp.com/", { waitUntil: "networkidle2" });
     /***************search the name**************************** */
     for(let i=0;i<names.length;i++){
+        
         await page.waitForSelector("._1awRl",{timeout:0});
-        let allsearchElem = await page.$("._1awRl");
-        await page.type(allsearchElem[0],names[i]);
+        await page.type("._1awRl", names[i]);
+
      /********************search alternative************************ */
     await page.keyboard.press("Enter");
     /***************type message ***************************** */
@@ -32,7 +33,7 @@ async function sendMessage() {
     await page.type("._2HE1Z._1hRBM",messgae);
     await page.keyboard.press("Enter");
 
-    for(let j=0; j<1; j++){
+    for(let j=0; j<notices.length; j++){
         //write the captions. 
         let caption = notices[j]["title"]; 
         await page.type("._2HE1Z._1hRBM",caption, {delay:10});  
