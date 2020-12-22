@@ -20,7 +20,8 @@ async function sendMessage() {
     /***************search the name**************************** */
     for(let i=0;i<names.length;i++){
         await page.waitForSelector("._1awRl",{timeout:0});
-        await page.type("._1awRl",names[i]);
+        let allsearchElem = await page.$("._1awRl");
+        await page.type(allsearchElem[0],names[i]);
      /********************search alternative************************ */
     await page.keyboard.press("Enter");
     /***************type message ***************************** */
@@ -31,10 +32,10 @@ async function sendMessage() {
     await page.type("._2HE1Z._1hRBM",messgae);
     await page.keyboard.press("Enter");
 
-    for(let j=0; j<notices.length; j++){
+    for(let j=0; j<1; j++){
         //write the captions. 
         let caption = notices[j]["title"]; 
-        await page.type("._2HE1Z._1hRBM",caption);  
+        await page.type("._2HE1Z._1hRBM",caption, {delay:10});  
         await page.keyboard.press("Enter");
 
         //send the image.
@@ -42,12 +43,14 @@ async function sendMessage() {
         await page.click("span[data-icon='clip']");
         let uploadImg=await page.$('input[type="file"]');
         await uploadImg.uploadFile(image);
-        await page.keyboard.press("Enter"); 
+        // await page.keyboard.press("Enter"); 
 
         //send caption 
-        // await page.type("._1awRl", caption); 
+        // await page.waitForSelector("._3tSYy");
+        // await page.type("._3tSYy", caption, {delay:50}); 
         //send button
-    //    await page.click(".q2PP6._3Git-");
+        await page.waitForSelector("._3ipVb");
+       await page.click("._3ipVb");
     
     }
 
